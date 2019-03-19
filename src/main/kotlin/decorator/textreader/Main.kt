@@ -5,7 +5,6 @@ fun main() {
     val stream = Authentication(Scrambling(Worker()))
     val str = arrayOf(String())
     stream.write(str)
-    println("main:\t\t" + str[0])
+    println("main:\t\t${str[0]}")
     stream.read(str)
 }
-

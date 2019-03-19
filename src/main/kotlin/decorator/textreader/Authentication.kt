@@ -7,19 +7,21 @@ class Authentication(var scrambling: Scrambling) : Decorator() {
         print("PASSWORD:\t")
         try {
             s[0] = `in`.readLine()
+            scrambling.write(s)
         } catch (ex: IOException) {
             ex.printStackTrace()
         }
-        scrambling.write(s)
     }
 
     public override fun read(s: Array<String>) {
         print("PASSWORD:\t")
+        val ss = arrayOf(String(), String())
         try {
-            s[0] = `in`.readLine()
+            ss[0] = s[0]
+            ss[1] = `in`.readLine()
+            scrambling.read(ss)
         } catch (ex: IOException) {
             ex.printStackTrace()
         }
-        scrambling.read(s)
     }
 }

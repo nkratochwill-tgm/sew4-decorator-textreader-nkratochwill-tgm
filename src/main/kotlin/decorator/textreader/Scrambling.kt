@@ -1,30 +1,16 @@
 package decorator.textreader
 
-import java.io.IOException
-
 class Scrambling(var worker: Worker) : Decorator() {
     public override fun write(s: Array<String>) {
-        worker.write(s)
+        val ss = arrayOf(String())
+        worker.write(ss)
         println("encrypt:\t\t")
-        try {
-            s[0] = "hallosew"
-            TODO("implement encrypt algorithm")
-        } catch (ex: IOException) {
-            ex.printStackTrace()
-        }
-        worker.read(s)
+        s[0] = s[0].encrypt(ss[0])
     }
 
     public override fun read(s: Array<String>) {
-        worker.write(s)
         println("decrypt:\t\t")
-        try {
-            s[0] = "hallo"
-            TODO("implement decrypt algorithm")
-
-        } catch (ex: IOException) {
-            ex.printStackTrace()
-        }
+        s[0] = s[0].decrypt(s[1])
         worker.read(s)
     }
 }

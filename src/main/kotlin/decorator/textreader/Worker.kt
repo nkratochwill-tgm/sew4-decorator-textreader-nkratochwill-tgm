@@ -2,6 +2,9 @@ package decorator.textreader
 
 import java.io.IOException
 
+/**
+ * Reads in the user text to encrypt or decrypt
+ */
 class Worker : TextReader() {
     public override fun write(s: Array<String>) {
         print("Input:\t\t")

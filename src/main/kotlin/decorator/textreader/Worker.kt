@@ -5,8 +5,8 @@ import java.io.IOException
 /**
  * Reads in the user text to encrypt or decrypt
  */
-class Worker : TextReader() {
-    public override fun write(s: Array<String>) {
+class Worker : TextReader {
+    override fun write(s: Array<String>) {
         print("Input:\t\t")
         try {
             s[0] = `in`.readLine()
@@ -16,7 +16,7 @@ class Worker : TextReader() {
 
     }
 
-    public override fun read(s: Array<String>) {
+    override fun read(s: Array<String>) {
         println("Output:\t\t" + s[0])
     }
 }

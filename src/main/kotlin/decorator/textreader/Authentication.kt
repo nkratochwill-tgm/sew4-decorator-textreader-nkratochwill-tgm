@@ -6,7 +6,7 @@ import java.io.IOException
  * Reads in the user password that will be used to encrypt or decrypt the user text from Worker.kt
  */
 class Authentication(var scrambling: Scrambling) : Decorator() {
-    public override fun write(s: Array<String>) {
+    override fun write(s: Array<String>) {
         print("PASSWORD:\t")
         try {
             s[0] = `in`.readLine()
@@ -16,7 +16,7 @@ class Authentication(var scrambling: Scrambling) : Decorator() {
         }
     }
 
-    public override fun read(s: Array<String>) {
+    override fun read(s: Array<String>) {
         print("PASSWORD:\t")
         val ss = Array(2) { "" }
         try {

@@ -8,14 +8,16 @@ Die detaillierte [Aufgabenstellung](TASK.md) beschreibt die notwendigen Schritte
 ### Move TextReader to Interface
 
 #### Vorteile
-Because Kotlin does not support multi-parent class inheritance, 
-implementing interfaces is a more flexible way than abstract classes.
+Da Java- und auch Kotlin-Klassen nur eine Erbung von anderen Klassen erlauben, 
+aber mehrere Interfaces implementieren können, ist ein Interface viel flexibler.
 
 "You can declare properties in interfaces. A property declared in an interface can either be abstract, 
 or it can provide implementations for accessors." - [Source](https://kotlinlang.org/docs/reference/interfaces.html)
 
+Durch diese Möglichkeit, ersparrt man sich das Objekterstellen in Authentication,Scrambling und Worker.
+
 #### Nachteile
-TODO
 
 ## Quellen
 https://kotlinlang.org/docs/reference/interfaces.html
+https://en.wikipedia.org/wiki/XOR_cipher

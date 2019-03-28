@@ -20,4 +20,5 @@ Durch diese Möglichkeit, ersparrt man sich das Objekterstellen in Authenticatio
 
 ## Quellen
 https://kotlinlang.org/docs/reference/interfaces.html
+
 https://en.wikipedia.org/wiki/XOR_cipher
